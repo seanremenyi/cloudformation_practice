@@ -1,0 +1,7 @@
+#Update with no interruption
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead

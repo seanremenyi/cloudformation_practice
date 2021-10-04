@@ -1,0 +1,6 @@
+#Bucket with no name gets unique identifier
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties: {}

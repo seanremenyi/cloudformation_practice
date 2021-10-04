@@ -1,0 +1,8 @@
+#Update causes replacement
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      BucketName: "some-random-string-uyedfv745gn4tgvuiw3g4"
