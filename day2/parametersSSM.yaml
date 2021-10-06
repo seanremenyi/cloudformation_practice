@@ -1,0 +1,19 @@
+Parameters:
+  InstanceType:
+    Description: Webserver EC2 instance type
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /dev/ec2/instanceType
+  ImageId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId: !Ref ImageId
+      
+# Instance type is a value we enter in SSM parameter with the name we use in dfault
+# Image id uses a public parameter in SSM parameter store
+# can update the parameters then update the stack with current template, in the parameters tab the value will have changed
