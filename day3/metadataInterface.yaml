@@ -30,6 +30,8 @@ Resources:
         - !Ref SecurityGroupID
       SubnetId: !Ref SubnetID
 
+#change the parameters UI in cloudformation
+
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
